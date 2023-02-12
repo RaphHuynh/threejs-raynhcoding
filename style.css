@@ -1,0 +1,153 @@
+@font-face {
+  font-family: "coffeeJelly";
+  src: url("font/CoffeeJellyUmai-4BmgD.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Stuart";
+  src: url(font/BrandinkSansLight-MV4mr.otf) format("opentype");
+}
+
+*{
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #2F3143;
+  font-family: "Stuart", sans-serif;
+}
+
+header {
+  padding: 20px;
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+  font-family: "coffeeJelly", sans-serif;
+  box-shadow: rgba(28, 28, 29, 0.636) 0px 10px 10px -10px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+}
+
+.logo {
+  font-size: 40px;
+  color: rgb(218, 224, 228);
+  right: 0px;
+  margin-right: auto;
+  margin-left: 0px;
+  background: none;
+}
+
+.menu {
+  margin-right: 30px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.items-menu{
+  color: rgb(190, 203, 210);
+  margin: 10px;
+  font-size: 20px;
+  background: linear-gradient(#ffffff, #ffffff) left no-repeat, #636eea;
+  background-size: 0% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.5s ease-in-out;
+}
+
+.items-menu:hover {
+  background-size: 100% 100%;
+}
+
+#bot-meteo{
+  display: none;
+}
+
+#bot-choix{
+  display: none;
+}
+
+.botMeteo-content{
+  height: 100vh;
+  position: absolute;
+  background: none;
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.botMeteo{
+  background-color: rgba(17, 18, 18, 0.1);
+  width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+  margin: auto;
+  margin-left: 250px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+#app{
+  top: 0px;
+  position: absolute;
+  z-index: 1;
+}
+
+h1{
+  font-family: "coffeeJelly", sans-serif;
+  margin: auto;
+  margin-right: 250px;
+  font-size: 120px;
+  color :#636eea;
+}
+
+p{
+  text-align: justify;
+  margin: 10px;
+  margin-bottom: 20px;
+}
+
+ul{
+  list-style: none;
+  text-align: justify;
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+.btn{
+  color: #ffffff;
+  border: #6e629d 3px solid;
+  background-color: #897ac0;
+  padding-top: 10px;
+  padding: 10px;
+  justify-content: center;
+  border-radius: 10px;
+  letter-spacing: 2%;
+  box-shadow: 0px 5px 0px #4f406c;
+}
+
+.btn:hover{
+  border: #9281d4 3px solid;
+  background-color: #7c6eae;
+  color: #dedcdc;
+}
+
+.btn:active{
+  border: #9281d4 2px solid;
+  box-shadow: 0px 5px 0px #4f406c;
+}
+
+#bot-contact{
+  display: none;
+}
