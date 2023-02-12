@@ -36,7 +36,7 @@ renderer.toneMappingExposure = 2.3;
 renderer.shadowMap.enabled = true;
 
 
-loader.load("discord.glb", (object) => {
+loader.load("./discord.glb", (object) => {
   var mesh = object.scene;
 
   mesh.position.set(0,0,0);
