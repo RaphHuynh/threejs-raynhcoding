@@ -1,6 +1,7 @@
 const meteo = document.querySelector("#bot-meteo");
 const choix = document.querySelector("#bot-choix");
 const contact = document.querySelector("#bot-contact");
+const accueil = document.querySelector("#accueil");
 
 window.addEventListener("wheel", function (event) {
     if(event.layerY==0){
@@ -10,33 +11,38 @@ window.addEventListener("wheel", function (event) {
         scrollY -= event.deltaY;
     }
     if (window.scrollY > 1) {
-        scrollY = 1;
-        meteo.style.display = "none";
-        choix.style.display = "none";
-        contact.style.display = "none";
+        accueil.style.display = 1;
+        meteo.style.opacity = 0;
+        choix.style.opacity = 0;
+        contact.style.opacity = 0;
+        this.window.scrollY=1;
     }
     if (window.scrollY <= 0) {
-        meteo.style.display = "none";
-        choix.style.display = "none";
-        contact.style.display = "none";
+        accueil.style.opacity = 1;
+        meteo.style.opacity = 0;
+        choix.style.opacity = 0;
+        contact.style.opacity = 0;
     }
     if (window.scrollY <= -500) {
-        meteo.style.display = "flex";
-        choix.style.display = "none";
-        contact.style.display = "none";
+        accueil.style.opacity = 0;
+        meteo.style.opacity += (-(scrollY/1500));
+        choix.style.opacity = 0;
+        contact.style.opacity = 0;
     }
     if (window.scrollY <= -1500) {
-        meteo.style.display = "none";
-        choix.style.display = "flex";
-        contact.style.display = "none";
+        accueil.style.opacity = 0;
+        meteo.style.opacity = 0;
+        choix.style.opacity +=(-(scrollY/2500));
+        contact.style.opacity = 0;
     }
     if (window.scrollY <= -2500) {
-        meteo.style.display = "none";
-        choix.style.display = "none";
-        contact.style.display = "flex";
+        accueil.style.opacity = 0;
+        meteo.style.opacity = 0;
+        choix.style.opacity = 0;
+        contact.style.opacity += (-(scrollY/3500));
     }
     if (window.scrollY <= -3500) {
         event.preventDefault();
-        scrollY = -3500;
+        window.scrollY = -3500;
     }
 }, { passive: false });

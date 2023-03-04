@@ -38,12 +38,12 @@ renderer.shadowMap.enabled = true;
 
 loader.load('discord.glb', (object) => {
   var mesh = object.scene;
-
-  mesh.position.set(0,0,0);
+  mesh.position.set(0.5,-0.07,0);
   mesh.rotation.set(-0.15,-0.3,-0.05);
   scene.add(mesh);
 
   window.addEventListener('wheel', function(event) {
+    console.log(event.deltaY);
     if(event.layerY===0){
       if(event.deltaY===0){
         mesh.rotation.set(-0.15,-0.3,-0.05);
@@ -69,8 +69,6 @@ loader.load('discord.glb', (object) => {
       mesh.rotation.set(-0.15,-0.3,-0.05);
     };
   },{ passive: false });
-
-  
 });
 
 function animate() {
